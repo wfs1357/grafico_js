@@ -16,13 +16,14 @@
     <main class="graficos-section">
         <section id="graficos-container" class="graficos-container">
             <div id="chart">
-                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
-                <script type="text/javascript">
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <script type="text/javascript">
                     google.charts.load('current', { packages: [ 'corechart' ] })
-                    google.charts.setOnLoadCallback(drawChart).
+                    google.charts.setOnLoadCallback(drawChart)
+                    
                     function drawChart() {
-                        const container = document.querySelector('#chart')
-                        const data = new google.visualization.arrayToDataTable([
+                    const container = document.querySelector('#chart')
+                    const data = new google.visualization.arrayToDataTable([
                             ['Filmes', 'Bilheteria' ]
                             ['Divertida Mente 2', '1,628,039,921' ]
                             ['Deadpool & Wolverine ', '1,147,848,023 ' ]
@@ -34,12 +35,10 @@
                             title: 'Filmes - Bilheteria'
                         height: 400
                         width: 720
-                    
-              const chart = new google.visualization.ColumnChart(container)
-               chart.draw(data, options)
-
-                    
-                    }
+                            }
+                            const chart = new google.visualization.ColumnChart(container)
+chart.draw(data, options)
+}
                 </script>
 </div>
 </section>
