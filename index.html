@@ -17,34 +17,36 @@
         <section id="graficos-container" class="graficos-container">
             <div id="chart">
                 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                    <script type="text/javascript">
-                    google.charts.load('current', { packages: [ 'corechart' ] })
-                    google.charts.setOnLoadCallback(drawChart)
-                    
+                <script type="text/javascript">
+                    google.charts.load('current', { packages: ['corechart'] });
+                    google.charts.setOnLoadCallback(drawChart);
+
                     function drawChart() {
-                    const container = document.querySelector('#chart')
-                    const data = new google.visualization.arrayToDataTable([
-                            ['Filmes', 'Bilheteria' ]
-                            ['Divertida Mente 2', '1,628,039,921' ]
-                            ['Deadpool & Wolverine ', '1,147,848,023 ' ]
-                            ['Meu Malvado Favorito 4', ' 849,602,685 ' ]
-                            ['Duna: Parte Dois ', '711,844,358' ]
-                            ['Godzilla x Kong: O Novo Império ', '567,650,016' ]
-                        ])
-                            const options = {     
-                            title: 'Filmes - Bilheteria'
-                        height: 400
-                        width: 720
-                            }
-                            const chart = new google.visualization.ColumnChart(container)
-chart.draw(data, options)
-}
+                        const container = document.querySelector('#chart');
+                        const data = new google.visualization.arrayToDataTable([
+                            ['Filmes', 'Bilheteria'],
+                            ['Divertida Mente 2', 1628039921],
+                            ['Deadpool & Wolverine', 1147848023],
+                            ['Meu Malvado Favorito 4', 849602685],
+                            ['Duna: Parte Dois', 711844358],
+                            ['Godzilla x Kong: O Novo Império', 567650016]
+                        ]);
+
+                        const options = {     
+                            title: 'Filmes - Bilheteria',
+                            height: 400,
+                            width: 720
+                        };
+
+                        const chart = new google.visualization.ColumnChart(container);
+                        chart.draw(data, options);
+                    }
                 </script>
-</div>
-</section>
-</main>
-<footer>
-        <p>Desenvolvido por wesley</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Wesley</p>
     </footer>
 </body>
 </html>
